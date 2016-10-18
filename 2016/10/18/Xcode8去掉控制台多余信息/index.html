@@ -92,13 +92,13 @@
 <meta property="og:site_name" content="chu's blog">
 <meta property="og:description" content="WHAT在更新到Xcode8之后我们可以看到控制台会多余打印出一些东西，如下所示：
 12342016-10-18 15:45:35.877398 TYDownloadManagerDemo[1449:108192]subsystem: com.apple.UIKit, category: HIDEventFiltered, enable_level: 0, persist_level: 0, de">
-<meta property="og:image" content="http://yoursite.com/../img/Xcode8去掉追踪信息.png">
-<meta property="og:updated_time" content="2016-10-18T10:15:11.000Z">
+<meta property="og:image" content="http://yoursite.com/../img/Xcode8去掉追踪信息.jpg">
+<meta property="og:updated_time" content="2016-10-18T10:17:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode8去掉控制台多余信息">
 <meta name="twitter:description" content="WHAT在更新到Xcode8之后我们可以看到控制台会多余打印出一些东西，如下所示：
 12342016-10-18 15:45:35.877398 TYDownloadManagerDemo[1449:108192]subsystem: com.apple.UIKit, category: HIDEventFiltered, enable_level: 0, persist_level: 0, de">
-<meta name="twitter:image" content="http://yoursite.com/../img/Xcode8去掉追踪信息.png">
+<meta name="twitter:image" content="http://yoursite.com/../img/Xcode8去掉追踪信息.jpg">
 
 
 
@@ -284,7 +284,7 @@
         <h2 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h2><p>在更新到Xcode8之后我们可以看到控制台会多余打印出一些东西，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">2016-10-18 15:45:35.877398 TYDownloadManagerDemo[1449:108192]</div><div class="line">subsystem: com.apple.UIKit, category: HIDEventFiltered, enable_level: 0, persist_level: 0, default_ttl: 0, info_ttl: 0, debug_ttl: 0, generate_symptoms: 0, enable_oversize: 1, privacy_setting: 2, enable_private_data: 0</div><div class="line">2016-10-18 15:45:35.878273 TYDownloadManagerDemo[1449:108192] subsystem: com.apple.UIKit, category: HIDEventIncoming, enable_level: 0, persist_level: 0, default_ttl: 0, info_ttl: 0, debug_ttl: 0, generate_symptoms: 0, enable_oversize: 1, privacy_setting: 2, enable_private_data: 0</div><div class="line">2016-10-18 15:45:35.991532 TYDownloadManagerDemo[1449:108153] subsystem: com.apple.BaseBoard, category: MachPort, enable_level: 1, persist_level: 0, default_ttl: 0, info_ttl: 0, debug_ttl: 0, generate_symptoms: 0, enable_oversize: 0, privacy_setting: 0, enable_private_data: 0</div></pre></td></tr></table></figure>
 <h2 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h2><p>其实这些输出的东西都是一些<em>活动信息</em>，在Xcode8中苹果看来是默认把活动信息设置成了输出，即OS_ACTIVITY_MODE默认是<em>debug</em>，有些同学不想看到这些输出信息，那我们就把这个模式改成<em>disable</em>即可。</p>
-<p>步骤如下：<br><br>在Xcode中依次找到Product–Scheme–Edit Scheme–Arguments然后在Enviroment Variables中添加OS_ACTIVITY_MODE,并且把value设置成disable即可。那样就看不到这些追踪信息了。<br><br><img src="../img/Xcode8去掉追踪信息.png" alt="Xcode8追踪信息"><br><br>关于iOS中<strong>追踪信息</strong>大家可以看下这篇文章:<a href="https://www.objccn.io/issue-19-5/" target="_blank" rel="external">活动追踪</a></p>
+<p>步骤如下：<br><br>在Xcode中依次找到Product–Scheme–Edit Scheme–Arguments然后在Enviroment Variables中添加OS_ACTIVITY_MODE,并且把value设置成disable即可。那样就看不到这些追踪信息了。<br><br><img src="../img/Xcode8去掉追踪信息.jpg" alt="Xcode8追踪信息"><br><br>关于iOS中<strong>追踪信息</strong>大家可以看下这篇文章:<a href="https://www.objccn.io/issue-19-5/" target="_blank" rel="external">活动追踪</a></p>
 
       
     </div>
